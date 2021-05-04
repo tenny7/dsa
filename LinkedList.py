@@ -30,5 +30,6 @@ ll = LinkedList()
 ll.insert_at_beginning(10)
 ll.insert_at_beginning(5)
 ll.insert_at_beginning(13)
+ll.insert_at_beginning(40)
 
 ll.print_list()
