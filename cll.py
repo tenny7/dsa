@@ -5,21 +5,27 @@ class Node(object):
         self.next = None
 
 
-class LinkedList(object):
+class CircularLinkedList(object):
     def __init__(self, head=None):
-        self.head = Node(10)
-        self.head.next = Node(20)
-        self.head.next.next = Node(30)
-        self.head.next.next.next = Node(40)
+        self.head = head
+
+    def insert_at_beginning(self, data=None):
+        new_element = Node(data)
+        if self.head is None:
+            self.head = new_element
+            self.head.next = self.head
+            return
+        # for (int current=self.head)
 
     def print_list(self):
         current = self.head
-        elements = ""
-        while current is not None:
-            elements += str(current.data) + " "
+        while True:
+            print(str(self.head.data) + "->")
             current = current.next
-        print(elements)
+            if current is self.head:
+                break
 
 
-ll = LinkedList()
+ll = CircularLinkedList()
+ll.insert_at_beginning(10)
 ll.print_list()
