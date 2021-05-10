@@ -16,6 +16,8 @@ class CircularLinkedList(object):
             self.head.next = self.head
             return
         # for (int current=self.head)
+    def insert_at_end(self):
+        pass
 
     def print_list(self):
         current = self.head
